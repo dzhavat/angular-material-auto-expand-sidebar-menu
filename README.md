@@ -1,4 +1,12 @@
-# AngularMaterialAutoExpandSidebarMenu
+# Auto expand sidebar menu using Angular Material
+
+## Demo
+
+![Auto expand menu demo](auto-expand-menu-demo.gif)
+
+---
+
+## The usual stuff
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.1.
 
