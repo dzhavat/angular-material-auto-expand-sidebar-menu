@@ -1,4 +1,4 @@
-import { Directive, AfterViewInit, Input, QueryList } from '@angular/core';
+import { Directive, Input, QueryList, AfterContentInit } from '@angular/core';
 import { MatExpansionPanel } from '@angular/material/expansion';
 import { from, filter, mergeMap } from 'rxjs';
 
@@ -9,13 +9,13 @@ import { NavListItemComponent } from './nav-list-item.component';
   exportAs: 'expandOnActiveLink',
   standalone: true,
 })
-export class ExpandOnActiveLinkDirective implements AfterViewInit {
+export class ExpandOnActiveLinkDirective implements AfterContentInit {
   @Input()
   navListItemComponents: QueryList<NavListItemComponent> | null = null;
 
   constructor(private panel: MatExpansionPanel) {}
 
-  ngAfterViewInit(): void {
+  ngAfterContentInit(): void {
     const navListItems = this.navListItemComponents?.toArray();
 
     if (navListItems) {
