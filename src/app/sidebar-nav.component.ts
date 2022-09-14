@@ -8,6 +8,7 @@ import { NavListComponent } from './@my-org/design-system/components/nav-list/na
   template: `<nav-list>
       <nav-list-item link="/page-1">Page 1</nav-list-item>
       <nav-list-item link="/page-2">Page 2</nav-list-item>
+      <nav-list-item link="https://angular.io/">Angular</nav-list-item>
     </nav-list>
 
     <nav-list [expandable]="true" [title]="'Nested menu'">
