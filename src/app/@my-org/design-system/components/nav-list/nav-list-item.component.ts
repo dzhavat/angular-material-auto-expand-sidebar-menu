@@ -31,7 +31,7 @@ import { MatRippleModule } from '@angular/material/core';
         mat-ripple
         [routerLink]="link"
         routerLinkActive="active"
-        (isActiveChange)="onRouterLinkActive($event)"
+        (isActiveChange)="isActive.emit($event)"
         ><ng-container *ngTemplateOutlet="templateContent"></ng-container
       ></a>
     </ng-template>
@@ -49,9 +49,5 @@ export class NavListItemComponent {
 
   get isExternalLink(): boolean {
     return /^(http:\/\/|https:\/\/)/i.test(this.link ?? '');
-  }
-
-  onRouterLinkActive(isActive: boolean): void {
-    this.isActive.emit(isActive);
   }
 }
